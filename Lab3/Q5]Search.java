@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.Scanner;
 
 
-class Easy{
+class Search{
 	public static void main(String[] args){
 
         	Scanner scanner = new Scanner(System.in);
