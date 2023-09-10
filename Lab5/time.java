@@ -1,4 +1,4 @@
-package Lab5;
+
 
 import java.util.*;
 class time
@@ -15,12 +15,11 @@ class time
         h=hr;
         m=min;
         s=sec;
-        while(s>60){s=s-60;m++;}
-        while(m>60){m=m-60;h++;}
+        
     }
     void display()
     {
-        System.out.println(h+":"+m+":"+s);
+        System.out.println(h+"hr"+":"+m+"min"+":"+s+"sec");
     }
     void add(time ob1, time ob2)
     {
@@ -35,7 +34,7 @@ class time
         
     }
 }
-class huh
+class Main
 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -50,8 +49,8 @@ class huh
         int S2=sc.nextInt();
         time ob2=new time(H2,M2,S2);
         time ob3=new time();
-        ob1.display();
-        ob2.display();
+        // ob1.display();
+        // ob2.display();
         ob3.add(ob1, ob2);
         ob3.display();
     }
