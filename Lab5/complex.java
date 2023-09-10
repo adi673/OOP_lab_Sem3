@@ -1,6 +1,12 @@
-package Lab5;
+
+
+
+
+
+
 
 import java.util.*;
+
 class complex
 {
     int real;
@@ -17,22 +23,23 @@ class complex
     }
     
     void add(int re, complex num){
-        num.real=num.real+re;
-        num.img=num.img;
+        real=num.real+re;
+        img=num.img;
     }
 
-    void add(complex num1, complex num2){
-       
-        num3.real=num1.real+num2.real;
-        num3.img=num1.img+num2.img;
-    }
+     void add(complex num1, complex num2){
+        
+         real=num1.real+num2.real;
+         img=num1.img+num2.img;
+        
+     }
 
-    void display(complex num){
-        System.out.println(num.real +"+"+num.img+"i");
+    void display(){
+        System.out.println(real + "+" + img +"i");
     }
        
 }
-class woah
+class Main
 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -43,30 +50,35 @@ class woah
         switch(n)
         {
         case 1:
-        System.out.println("give an integer, the real part and imaginary part of a complex number respectively");
-        int a=sc.nextInt();
-        int b=sc.nextInt();
-        complex ob1=new complex(a,b);
-
-        int c=sc.nextInt();
-        int d=sc.nextInt();
-        complex ob2=new complex(c,d);
-        complex num3=new complex();
-        // num3.add()
-        display(num3);
-        break;
+            System.out.println("Enter integer (real part) to add");
+            int a=sc.nextInt();
+            System.out.println("Enter real and immaginary part of complex numebr");
+            int b=sc.nextInt();
+            int c=sc.nextInt();
+            complex ob1=new complex(b,c);
+            complex num1=new complex();
+            num1.add(a,ob1);
+            num1.display();
+            break;
         case 2:
-        System.out.println("give the real part and imaginary part of complex number 1 respectively");
-        int a1=sc.nextInt();
-        int b1=sc.nextInt();
-        System.out.println("give the real part and imaginary part of complex number 2 respectively");
-        int a2=sc.nextInt();
-        int b2=sc.nextInt();
-        ob.add(a1,a2,b1,b2);
-        break;
+            System.out.println("Enter real and immaginary part of complex numebr");
+            int d=sc.nextInt();
+            int e=sc.nextInt();
+            complex ob2=new complex(d,e);
+            System.out.println("Enter real and immaginary part of complex numebr");
+            int f=sc.nextInt();
+            int g=sc.nextInt();
+            complex ob3=new complex(f,g);
+
+            complex num2=new complex();
+            num2.add(ob2,ob3);
+            num2.display();
+        
+       
+             break;
         default:
-        System.out.println("Incorrect input");
-        break;
+            System.out.println("Incorrect input");
+            break;
         }
     }
 }
