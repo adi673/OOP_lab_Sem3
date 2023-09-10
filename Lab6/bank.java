@@ -1,3 +1,5 @@
+//run in replit
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -42,7 +44,7 @@ class AXIS extends Bank
     }
 }
 
-public class BankIntrest {
+ class Main {
     public static void main(String[] args) 
     {
         Bank sbiBank = new SBI();
